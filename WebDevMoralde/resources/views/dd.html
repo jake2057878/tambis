@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Laravel</title>
+
+  <!-- Fonts -->
+
+  <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CDN -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+
+    body {
+
+      background-color: #B76E79; /* Rose Gold Background */
+
+      color: #333;
+
+    }
+
+    .navbar-custom {
+
+      background-color: #333;
+
+      padding: 10px 15px;
+
+    }
+
+    .navbar-custom a {
+
+      color: white;
+
+      font-size: 1.1em;
+
+      text-decoration: none;
+
+    }
+
+    .navbar-custom a:hover {
+
+      background-color: #ddd;
+
+      color: #333;
+
+    }
+
+    /* Navbar header with hamburger on the right */
+
+    .navbar-header {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+    }
+
+    .navbar-toggler {
+
+      border: none;
+
+      background: none;
+
+      font-size: 1.5em;
+
+      color: white;
+
+      cursor: pointer;
+
+    }
+
+    /* Hide the nav menu by default */
+
+    #navbarNav {
+
+      display: none;
+
+      margin-top: 10px;
+
+    }
+
+    /* Photo container styling */
+
+    .photo-container {
+
+      text-align: center;
+
+      margin-top: 20px;
+
+    }
+
+    /* Main Content Section with white background */
+
+    .content {
+
+      text-align: center;
+
+      padding: 50px 20px;
+
+      background-color: white;
+
+      margin-top: 20px;
+
+    }
+
+    .content h1 {
+
+      font-size: 3em;
+
+      color: #333;
+
+    }
+
+    .container {
+
+      max-width: 900px;
+
+      margin: auto;
+
+    }
+
+    .flex-container {
+
+      margin-top: 30px;
+
+    }
+
+    .flex-container .card {
+
+      margin-bottom: 20px;
+
+      background-color: white;
+
+      padding: 30px;
+
+      border-radius: 10px;
+
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      text-align: center;
+
+      border: none;
+
+    }
+
+    .footer {
+
+      background-color: #333;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 15px;
+
+      position: fixed;
+
+      width: 100%;
+
+      bottom: 0;
+
+    }
+
+  </style>
+
+</head>
+
+<body class="antialiased">
+
+  <!-- Navbar Section -->
+
+  <nav class="navbar navbar-custom">
+
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="#">SHIENA B. RELOZ</a>
+
+      <!-- Hamburger menu button on the right -->
+
+      <button id="hamburger" class="navbar-toggler" type="button">&#9776;</button>
+
+    </div>
+
+    <!-- Navigation Menu (hidden by default) -->
+
+    <div id="navbarNav">
+
+      <ul class="navbar-nav">
+
+        <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="#contact">ABOUT ME</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="#service">CONTACT</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="#about">MORE</a></li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+
+  <!-- Main Content Section -->
+
+  <div class="content">
+
+    <h1>WELCOME TO MY PERSONAL PAGE</h1>
+
+  </div>
+
+
+  <!-- Photo Container (centered, now placed after the welcome message) -->
+
+  <div class="photo-container">
+
+    <img src="{{ asset('img/shin.jpg') }}" class="img-fluid" alt="Profile Picture" style="display: block; margin: 0 auto; max-width: 250px;">
+
+  </div>
+
+
+  <!-- Flex Container for Cards -->
+
+  <div class="container flex-container">
+
+    <div class="row">
+
+      <!-- Profile Card (text only, photo is now in its own container) -->
+
+      <div class="card col-md-3">
+
+        <div class="card-body">
+
+          <h4 class="card-title">SHIENA B. RELOZ</h4>
+
+          <h6>AGE: 21</h6>
+
+          <h6>Address: Brgy. Kanangkaan, Sogod, Southern Leyte</h6>
+
+          <h6>Studied: Southern Leyte State University San Ramon Bontoc</h6>
+
+        </div>
+
+      </div>
+
+      <!-- Hobbies Card -->
+
+      <div class="card col-md-3">
+
+        <div class="card-body">
+
+          <h4 class="card-title">MY HOBBIES</h4>
+
+          <h6>Things I love most to do whenever I have a lot of time to spare:</h6>
+
+          <h6>Jamming to music, Singing, Dancing, & Reading.</h6>
+
+        </div>
+
+      </div>
+
+      <!-- Contact Card -->
+
+      <div class="card col-md-3">
+
+        <div class="card-body">
+
+          <h4 class="card-title">MY CONTACT</h4>
+
+          <p>You can contact me through here</p>
+
+          <h6>Email: <a href="mailto:senojiahanadon@gmial.com">relozshiena@gmail.com</a></h6>
+
+          <h6>Phone: 0953424361</h6>
+
+          <h6>FB: Shiena Reloz</h6>
+
+        </div>
+
+      </div>
+
+      <!-- About/Profile Card with Show More/Less -->
+
+      <div class="card col-md-3">
+
+        <div class="card-body">
+
+          <h4 class="card-title">MY PROFILE</h4>
+
+          <h6>Hi! I'm Shiena B. Reloz, 21 yrs. of age and currently living in Brgy. Kanangkaan, Sogod, Southern Leyte.</h6>
+
+          <h6>A typa girl who tends to overthink a lot yet in contradictory, not so good at words.</h6>
+
+          <!-- Extra About Content (hidden by default) -->
+
+          <div id="aboutExtra" style="display: none; margin-top:15px;">
+
+            <p>Here is more information about me. I love exploring new hobbies, learning new things, and meeting interesting people.</p>
+
+          </div>
+
+          <!-- Button to toggle extra about content -->
+
+          <button id="toggleAbout" class="btn btn-secondary mt-2">Show More</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Footer Section -->
+
+  <div class="footer">
+
+    <h6>&copy; 2025 SHIENA B. RELOZ. All rights reserved.</h6>
+
+  </div>
+
+
+  <!-- jQuery CDN -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom jQuery Scripts -->
+
+  <script>
+
+    $(document).ready(function(){
+
+      // Toggle the hamburger menu on click
+
+      $("#hamburger").click(function(){
+
+        $("#navbarNav").slideToggle();
+
+      });
+
+      // Toggle the About section content on click
+
+      $("#toggleAbout").click(function(){
+
+        $("#aboutExtra").slideToggle();
+
+        var btnText = $("#toggleAbout").text() === "Show More" ? "Show Less" : "Show More";
+
+        $("#toggleAbout").text(btnText);
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>
